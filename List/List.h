@@ -21,6 +21,15 @@ void print_nodes(list l)
 	printf("\n");
 }
 
+void print_nodes_by_address(list l, int head)
+{
+	while (head !=-1)
+	{
+		printf("Entry %d is %c and points to entry %d\n", head, l.nodes[head].value, l.nodes[head].address);
+		head = l.nodes[head].address;
+	}
+}
+
 // Initialize nodes for the first time
 void initialize_nodes(list l)
 {
